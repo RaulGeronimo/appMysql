@@ -1,0 +1,102 @@
+body {
+  background: #222222;
+  font-family: 'Oswald', sans-serif;
+
+  overflow: hidden;
+}
+
+.index {
+  width: 100vw;
+  height: 100vh;
+}
+
+.bg-black {
+  background: #090909;
+}
+
+.navbar {
+  background: black !important;
+}
+
+.nav-link {
+  color: #fff !important;
+}
+
+.cards {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.masthead {
+  color: white;
+  min-height: 30rem;
+  width: 100%;
+  height: 100%;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  background: url('/img/background.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.masthead h1 {
+  font-size: 4rem;
+  margin: 0;
+  padding: 0;
+}
+
+/* SCROLL */
+.container-scroll {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 80vh;
+  line-height: 1.3;
+  overflow: auto;
+}
+
+/* Tamaño del scroll */
+.container-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Estilos barra (thumb) de scroll */
+.container-scroll::-webkit-scrollbar-thumb {
+  background: #303030;
+  border-radius: 4px;
+}
+
+.container-scroll::-webkit-scrollbar-thumb:hover {
+  background: #000000;
+}
+
+@media (min-width: 992px) {
+  .masthead {
+    height: 100vh;
+  }
+
+  .masthead h1 {
+    font-size: 5.5rem;
+  }
+
+  .container-scroll {
+    height: 76vh;
+    line-height: 1;
+  }
+
+  .container-scroll::-webkit-scrollbar {
+    width: 10px;
+  }
+}
+
+@media (max-height: 992px) {
+  .container-scroll {
+    height: 90vh;
+    line-height: 1;
+  }
+
+  .container-scroll::-webkit-scrollbar {
+    width: 10px;
+  }
+}

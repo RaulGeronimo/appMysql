@@ -1,0 +1,33 @@
+<div class="container-scroll container p-4">
+    <div class="row">
+        {{#each links}}
+        <div class="col-md-3 cards">
+            <div class="card text-center">
+                <div class="card-body">
+                    <a href="{{url}}" target="_blank">
+                        <h3 class="card-title text-uppercase">
+                            {{title}}
+                        </h3>
+                    </a>
+                    <p class="m-2">{{description}}</p>
+                    <p class="text-muted">
+                        {{timeago created_at}}
+                    </p>
+                    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                        <a class="btn btn-danger" href="/links/delete/{{id}}"
+                            onclick="return confirm('¿Estás seguro que deseas eliminar el registro?')">Eliminar</a>
+                        <a class="btn btn-secondary" href="/links/edit/{{id}}">Actualizar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{else}}
+        <div class="col-md-4 mx-auto">
+            <div class="card card-body text-center">
+                <p>No hay enlaces guardados todavía.</p>
+                <a href="/links/add">¡Crea uno!</a>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>

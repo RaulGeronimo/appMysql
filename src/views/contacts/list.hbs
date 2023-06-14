@@ -1,0 +1,35 @@
+<div class="container-scroll container p-4">
+    <div class="row">
+        {{#each contacts}}
+        <div class="col-md-3 cards">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h3 class="card-title text-uppercase">
+                        {{fullname}}
+                    </h3>
+                    <p class="m-2">{{phone}}</p>
+                    <div class="m-2">{{email}}</div>
+                    <div class="m-2">{{birth}}</div>
+                    <div class="m-2">Edad: {{years}}</div>
+                    <div class="m-2">{{days}}</div>
+                    <p class="text-muted">
+                        {{timeago created_at}}
+                    </p>
+                    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                        <a class="btn btn-danger" href="/contacts/delete/{{id}}"
+                            onclick="return confirm('¿Estás seguro que deseas eliminar el registro?')">Eliminar</a>
+                        <a class="btn btn-secondary" href="/contacts/edit/{{id}}">Actualizar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{else}}
+        <div class="col-md-4 mx-auto">
+            <div class="card card-body text-center">
+                <p>No hay contactos guardados todavía.</p>
+                <a href="/contacts/add">¡Crea uno!</a>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>

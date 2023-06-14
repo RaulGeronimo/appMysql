@@ -1,0 +1,41 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="card mt-5 text-center rounded">
+                <div class="card-body">
+                    <form action="/contacts/add" method="POST">
+                        {{!-- Nombre Completo --}}
+                        <div class="form-group">
+                            <input type="text" name="fullname" class="form-control" placeholder="Nombre Completo"
+                                autofocus required>
+                        </div>
+                        {{!-- Telefono --}}
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-phone"></i></span>
+                            </div>
+                            <input type="tel" name="phone" class="form-control" pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
+                                title="Un número de teléfono válido consiste en un área de código de 3 dígitos entre paréntesis, un espacio, los tres primeros dígitos del número, un espacio o hypen (-), y cuatro dígitos más."
+                                placeholder="Numero de Telefono" required />
+                        </div>
+                        {{!-- Correo --}}
+                        <div class="form-group">
+                            <input type="email" name="email" class="form-control" placeholder="Correo" required>
+                        </div>
+                        {{!-- Cumpleaños --}}
+                        <div class="form-group">
+                            <input type="date" name="birth" class="form-control" required>
+                        </div>
+                        {{!-- Submit --}}
+                        <div class="form-group">
+                            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                                <button class="btn btn-success btn-block">Guardar</button>
+                                <a href="/contacts" class="btn btn-primary">Regresar</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
